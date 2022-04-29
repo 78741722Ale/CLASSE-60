@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON - Live Coding</title>
+    <!-- Link a CDN di Axios -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js' integrity='sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==' crossorigin='anonymous' referrerpolicy='no-referrer'></script>
+</head>
+<body>
+    
+    <!-- Elemento radice -->
+    <div id="app">
+        <h1>Hello World</h1>
+        <!-- il V-IF è l'escape per l'errore che lascia in console -->
+        <p v-if="data">Il numero random è : {{data.response}} </p>
+        <!-- PC number -->
+        <h3>Number Game</h3>
+        <h5>Il Numero Del PC è : {{pc_number}}</h5>
+        <!-- User Number -->
+        <h3>Number Game</h3>
+        <h5>Il Numero Dell'utente è : {{user_number}}</h5>
+
+        <!-- Chi vince, dichiaro il vincitore grazie all'API -->
+        <h3>il vincitore è:</h3>
+        <h5>{{pc_number > user_number ? 'PC' : 'User'}}</h5>
+    </div>
+
+    <!-- Link a Vue -->
+    <script src='https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js'></script>
+    <!-- Link a JS -->
+    <script src='../json-live/app.js'></script>
+    
+</body>
+</html>
