@@ -25,6 +25,8 @@ const app = new Vue({
         fifth: 'person.ciboPrefe2[person.ciboPrefe2.length -1].name.slice(2,4)',
         // Stringa Sesto Elemento
         sixth: 'grandGrandFather.GrandFather[0].Father[0].Child.age',
+        // Stringa Settimo Elemento
+        seventh: 'grandGrandFather.GrandFather[grandGrandFather.GrandFather.length - 1].Father[grandGrandFather.GrandFather[grandGrandFather.GrandFather.length - 1].Father.length - 1].Child.age',
         // 1 Esempio
         person: {
             name: 'Alessandro',
@@ -59,7 +61,8 @@ const app = new Vue({
                             Child: {
                                 name: 'Alessandro',
                                 surname: 'Pecorilla',
-                                age: 26
+                                age: 26,
+                                gender: 'Adoro la Pucchiacca'
                             }
                         }
                     ]
