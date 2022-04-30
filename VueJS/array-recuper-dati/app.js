@@ -17,6 +17,10 @@ const app = new Vue({
         first: 'person.name',
         // Stringa Secondo Elemento
         second: 'person.ciboPrefe[0]',
+        // Stringa Terzo Elemento
+        third: 'person.ciboPrefe2[1].name',
+        // Stringa 4 elemento
+        fourth: 'person.ciboPrefe2[person.ciboPrefe2.length -1].name',
         // 1 Esempio
         person: {
             name: 'Alessandro',
@@ -26,7 +30,17 @@ const app = new Vue({
                 'Pizza',
                 'Sushi',
                 'Pasta'
-            ]
+            ],
+            ciboPrefe2: [
+                {
+                    name: 'Pizza',
+                    isGood: 'yes'
+                },
+                {
+                    name: 'Sushi',
+                    isGood: 'yes'
+                }
+            ],
         },
     },
     // Metodi Contenuti

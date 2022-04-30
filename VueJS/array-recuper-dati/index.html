@@ -22,10 +22,11 @@ body {
 
 /* Container Principale */
 #app {
-    width: 800px;
+    width: 1000px;
     box-shadow: 0 0 30px black;
     margin: 0 auto;
     margin-top: 6rem;
+    padding: 1rem;
     text-align: center;
     
 }
@@ -88,6 +89,20 @@ h1 {
             <div class="cell-xs" v-html="second">{{second}}</div>
             <!-- Posizione [0] è l'indice di riferimento -->
             <div class="cell-xs" v-html="person.ciboPrefe[0]"><strong>{{person.ciboPrefe[0]}}</strong></div>
+        </div>
+        <!-- 3°Esempio - Array di oggetto annidato  -->
+        <div class="cell">
+            <div class="cell-xs">Un item di array in oggetto annidato</div>
+            <div class="cell-xs" v-html="third">{{third}}</div>
+            <!-- Posizione [1] è l'indice di riferimento -->
+            <div class="cell-xs" v-html="person.ciboPrefe2[1].name"><strong>{{person.ciboPrefe2[1].name}}</strong></div>
+        </div>
+        <!-- 4°Esempio - Array di oggetto annidato all'ultima posizione -->
+        <div class="cell">
+            <div class="cell-xs">Un item di array in posizione finale</div>
+            <div class="cell-xs" v-html="fourth">{{fourth}}</div>
+            <!-- Posizione [1] è l'indice di riferimento -->
+            <div class="cell-xs" v-html="person.ciboPrefe2[person.ciboPrefe2.length -1].name"><strong>{{person.ciboPrefe2[person.ciboPrefe2.length -1].name}}</strong></div>
         </div>
     </div>
 
