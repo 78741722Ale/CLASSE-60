@@ -23,6 +23,8 @@ const app = new Vue({
         fourth: 'person.ciboPrefe2[person.ciboPrefe2.length -1].name',
         // Stringa Quinto Elemento
         fifth: 'person.ciboPrefe2[person.ciboPrefe2.length -1].name.slice(2,4)',
+        // Stringa Sesto Elemento
+        sixth: 'grandGrandFather.GrandFather[0].Father[0].Child.age',
         // 1 Esempio
         person: {
             name: 'Alessandro',
@@ -48,6 +50,22 @@ const app = new Vue({
                 },
             ],
         },
+        // 6 Esempio
+        grandGrandFather: {
+            GrandFather: [
+                {
+                    Father: [
+                        {
+                            Child: {
+                                name: 'Alessandro',
+                                surname: 'Pecorilla',
+                                age: 26
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
     },
     // Metodi Contenuti
     methods: {

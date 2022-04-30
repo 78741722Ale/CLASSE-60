@@ -22,7 +22,7 @@ body {
 
 /* Container Principale */
 #app {
-    width: 1000px;
+    width: 1200px;
     box-shadow: 0 0 30px black;
     margin: 0 auto;
     margin-top: 6rem;
@@ -111,6 +111,14 @@ h1 {
             <!-- Posizione [-1] è l'ultimo indice di riferimento -->
             <!-- Mi riporta solo alcuni caratteri -->
             <div class="cell-xs"><strong>{{person.ciboPrefe2[person.ciboPrefe2.length -1].name.slice(2,4)}}</strong></div>
+        </div>
+        <!-- 6°Esempio - Annidamento molto complesso -->
+        <div class="cell">
+            <div class="cell-xs">Annidamento complesso. Oggetto annidato in array e in oggetti</div>
+            <div class="cell-xs" v-html="sixth">{{sixth}}</div>
+            <!-- Posizione [-1] è l'ultimo indice di riferimento -->
+            <!-- Mi riporta solo alcuni caratteri -->
+            <div class="cell-xs"><strong>{{grandGrandFather.GrandFather[0].Father[0].Child.age}}</strong></div>
         </div>
     </div>
 
