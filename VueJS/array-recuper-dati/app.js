@@ -39,7 +39,11 @@ const app = new Vue({
                 {
                     name: 'Sushi',
                     isGood: 'yes'
-                }
+                },
+                {
+                    name: 'Acqua',
+                    isGood: 'yes'
+                },
             ],
         },
     },
