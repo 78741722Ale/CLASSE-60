@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recupero Dati in Vue</title>
+</head>
+
+<!-- Foglio Di stile -->
+<style>
+
+/* Regola Generale */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(177, 221, 215);
+    filter: opacity(70%);
+}
+
+/* Container Principale */
+#app {
+    width: 800px;
+    box-shadow: 0 0 30px black;
+    margin: 0 auto;
+    margin-top: 6rem;
+    text-align: center;
+    
+}
+
+h1 {
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
+}
+
+/* Classe Cella */
+.cell {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Cell TITLE */
+.cell-title {
+    border: 1px solid black;
+}
+
+/* Cell - XS */
+.cell-xs,
+.cell-title {
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+/* Common classes */
+.cell-title,
+.cell-xs,
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</style>
+
+
+<body>
+    <!-- Qua recupero da APP -->
+    <!-- Link a div con ID Principale -->
+    <div id='app'>
+        <h1>ARRAY - RECUPERO DATI</h1>
+        <!-- Table Head -->
+        <div class="cell">
+            <div class="cell-title"><strong>NEED TO TAKE</strong></div>
+            <div class="cell-title"><strong>HOW TO TAKE</strong></div>
+            <div class="cell-title"><strong>RESULT</strong></div>
+        </div>
+        <!-- 1°esempio - Recupero nome di un oggetto in DATA -->
+        <div class="cell">
+            <div class="cell-xs">Nome di una persona</div>
+            <div class="cell-xs" v-html="first">{{first}}</div>
+            <div class="cell-xs" v-html="person.name"><strong>{{person.name}}</strong></div>
+        </div>
+        <!-- 2°Esempio - Recupero Qualcosa da Oggetto con Array Annidato -->
+        <div class="cell">
+            <div class="cell-xs">Un item di array in oggetto</div>
+            <div class="cell-xs" v-html="second">{{second}}</div>
+            <!-- Posizione [0] è l'indice di riferimento -->
+            <div class="cell-xs" v-html="person.ciboPrefe[0]"><strong>{{person.ciboPrefe[0]}}</strong></div>
+        </div>
+    </div>
+
+    <!-- Link a Vue -->
+    <script src='https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js'></script>
+    <!-- Link a JS -->
+    <script src='../array-recuper-dati/app.js'></script>
+</body>
+</html>
