@@ -79,30 +79,38 @@ h1 {
         </div>
         <!-- 1°esempio - Recupero nome di un oggetto in DATA -->
         <div class="cell">
-            <div class="cell-xs">Nome di una persona</div>
+            <div class="cell-xs">Nome di una persona da un singolo oggetto in data.</div>
             <div class="cell-xs" v-html="first">{{first}}</div>
-            <div class="cell-xs" v-html="person.name"><strong>{{person.name}}</strong></div>
+            <div class="cell-xs"><strong>{{person.name}}</strong></div>
         </div>
         <!-- 2°Esempio - Recupero Qualcosa da Oggetto con Array Annidato -->
         <div class="cell">
-            <div class="cell-xs">Un item di array in oggetto</div>
+            <div class="cell-xs">Un elemento di un array in oggetto.</div>
             <div class="cell-xs" v-html="second">{{second}}</div>
             <!-- Posizione [0] è l'indice di riferimento -->
-            <div class="cell-xs" v-html="person.ciboPrefe[0]"><strong>{{person.ciboPrefe[0]}}</strong></div>
+            <div class="cell-xs"><strong>{{person.ciboPrefe[0]}}</strong></div>
         </div>
         <!-- 3°Esempio - Array di oggetto annidato  -->
         <div class="cell">
             <div class="cell-xs">Un item di array in oggetto annidato</div>
             <div class="cell-xs" v-html="third">{{third}}</div>
             <!-- Posizione [1] è l'indice di riferimento -->
-            <div class="cell-xs" v-html="person.ciboPrefe2[1].name"><strong>{{person.ciboPrefe2[1].name}}</strong></div>
+            <div class="cell-xs"><strong>{{person.ciboPrefe2[1].name}}</strong></div>
         </div>
         <!-- 4°Esempio - Array di oggetto annidato all'ultima posizione -->
         <div class="cell">
             <div class="cell-xs">Un item di array in posizione finale</div>
             <div class="cell-xs" v-html="fourth">{{fourth}}</div>
             <!-- Posizione [1] è l'indice di riferimento -->
-            <div class="cell-xs" v-html="person.ciboPrefe2[person.ciboPrefe2.length -1].name"><strong>{{person.ciboPrefe2[person.ciboPrefe2.length -1].name}}</strong></div>
+            <div class="cell-xs"><strong>{{person.ciboPrefe2[person.ciboPrefe2.length -1].name}}</strong></div>
+        </div>
+        <!-- 5°Esempio - Array di oggetto annidato all'ultima posizione con un method -->
+        <div class="cell">
+            <div class="cell-xs">Un item di array in posizione finale con un method.</div>
+            <div class="cell-xs" v-html="fifth">{{fifth}}</div>
+            <!-- Posizione [-1] è l'ultimo indice di riferimento -->
+            <!-- Mi riporta solo alcuni caratteri -->
+            <div class="cell-xs"><strong>{{person.ciboPrefe2[person.ciboPrefe2.length -1].name.slice(2,4)}}</strong></div>
         </div>
     </div>
 

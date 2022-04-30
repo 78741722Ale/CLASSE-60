@@ -21,6 +21,8 @@ const app = new Vue({
         third: 'person.ciboPrefe2[1].name',
         // Stringa 4 elemento
         fourth: 'person.ciboPrefe2[person.ciboPrefe2.length -1].name',
+        // Stringa Quinto Elemento
+        fifth: 'person.ciboPrefe2[person.ciboPrefe2.length -1].name.slice(2,4)',
         // 1 Esempio
         person: {
             name: 'Alessandro',
