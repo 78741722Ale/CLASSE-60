@@ -1,13 +1,5 @@
-// Qua semplice richiamo, fuori dalla radice
 
-
-
-
-
-
-
-
-// Questo è recupero Dati dalla radice
+// Questo è recupero Dati dalla radice con ID APP
 const app = new Vue({
     // Riferimento all'container con id App
     el: '#app',
@@ -75,3 +67,16 @@ const app = new Vue({
 
     },
 })
+
+// Questo è recupero Dati dalla radice con v-for_app
+
+const v_for_app = new Vue({
+    // Riferimento all'container con id App
+    el: '#v-for_app',
+    // dati contenuti
+    data: {
+        // Esercizio 1
+        person: ['Andrea', 'Mattia', 'Nicola', 'Alessandro', 'Cristina']
+    },
+
+}) 
