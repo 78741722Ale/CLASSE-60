@@ -1,0 +1,19 @@
+ls . => cartella padre della cartella corrente
+
+ls .. => cartella precedente
+
+pwd => fa riferimento alla cartella home : es "/Users/AlessandroBT/Desktop/CLASSE#60/VueJS".
+
+ls - alt => informazioni in più rispetto alla posizione dove mi trovo.
+
+clear => pulizia totale della riga di comando.
+
+mkdir nomeCheVoglio => crea una nuova cartella con quel nome
+
+cd nomeCheVoglio/ => entro nella cartella creata, mi sposta direttamente
+
+rmdir nomeCheDevoRimuovere => rimuovo la cartella che voglio con tale nome
+
+alt + 5 => per creare la tilde
+
+cat nomeDelFile => Guarda cosa c'è dentro quel file

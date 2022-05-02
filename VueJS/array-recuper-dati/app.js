@@ -76,7 +76,24 @@ const v_for_app = new Vue({
     // dati contenuti
     data: {
         // Esercizio 1
-        person: ['Andrea', 'Mattia', 'Nicola', 'Alessandro', 'Cristina']
+        person: ['Andrea', 'Mattia', 'Nicola', 'Alessandro', 'Cristina'],
+        // Esercizio 2
+        v_for_string: 'L\'indice è il numero:', // Semplice Stringa
+        // Array di oggetti senza nome
+        items: [
+            // Primo Object
+            {
+                message: 'Io sono il primo',
+            },
+            // Secondo Object
+            {
+                message: 'Io sono il secondo'
+            },
+            // Terzo Object
+            {
+                message: 'Io sono il Terzo'
+            },
+        ]
     },
 
 }) 

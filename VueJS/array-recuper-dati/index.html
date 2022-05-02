@@ -134,25 +134,33 @@ h1 {
     <!-- /#v-for_app -->
     <div id="v-for_app">
         <h1>V-FOR NEL DOM ELEMENT</h1>
-        <!-- Table Head -->
+        <!-- Primo Esempio -->
         <div class="cell">
             <div class="cell-title"><strong>HOW TO TAKE WITH V-FOR ELEMENTS IN OBJECT</strong></div>
         </div>
-        <!-- Primo Esempio -->
-        <!-- Element (che è un parametro) che indica che voglio qualcosa dall'oggetto person -->
-        <!-- Poi, richiamo appunto tra i mustaches solo quello che mi serve. Non tutto il percorso -->
+        <!-- Element (che è un parametro) che indica che voglio 
+        qualcosa dall'oggetto person  Poi, richiamo appunto tra i mustaches solo 
+        quello che mi serve. Non tutto il percorso -->
         <div class="cell">
             <div class="cell-xs" v-for="element in person"><strong>{{element}}</strong></div>
         </div>
         <!-- Secondo Esempio -->
-        <!-- Stampo gli elementi dell'array con un V-SHOW e decido io quali stampare grazie alla lunghezza dell'array -->
-        <!-- Scelgo io quanti elementi stampare -->
         <div class="cell">
             <div class="cell-title"><strong>HOW TO TAKE WITH V-FOR ELEMENTS IN A SPECIFIC INDEX IN OBJECT</strong></div>
         </div>
-        <!-- Cella Principale -->
+        <!-- Stampo gli elementi dell'array con un V-SHOW e decido io quali stampare 
+        grazie alla lunghezza dell'array. Scelgo io quanti elementi stampare -->
         <div class="cell">
             <div class="cell-xs" v-show="person.length = 2" v-for="(index) in person"><strong>{{index}}</strong></div>
+        </div>
+        <!-- Terzo Esempio -->
+        <div class="cell">
+            <div class="cell-title"><strong>HOW TO TAKE WITH V-FOR ELEMENTS WITH DIFFERENT NATURE</strong></div>
+        </div>
+        <!--  All'interno dei blocchi v-for abbiamo pieno accesso alle proprietà dell'ambito padre. 
+            v-for supporta anche un secondo argomento facoltativo per l'indice dell'elemento corrente. -->
+        <div class="cell">
+            <div class="cell-xs" v-for="(item, index) in items"><strong>{{ v_for_string }} {{ index }} e {{ item.message }}</strong></div>
         </div>
     </div>
     
